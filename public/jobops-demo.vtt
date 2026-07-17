@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00.000 --> 00:08.000
+Job searching is not one task. It is a long-running operations workflow across discovery, research, resumes, repetitive forms, and follow-up.
+
+00:08.000 --> 00:13.000
+Most automation optimizes for volume. JobOps optimizes for trust.
+
+00:13.000 --> 00:24.000
+This public demo uses a fictional candidate and employer. The discovery agent normalizes the role. A deterministic policy engine checks the source, location, salary, and clearance rules.
+
+00:24.000 --> 00:33.000
+GPT-5.6 creates an evidence-bound fit brief. JobOps routes an approved resume, fills only verified answers, and confirms success only after evidence exists.
+
+00:33.000 --> 00:41.000
+On an unverified employer source, the workflow stops for human review. The agent cannot silently expand its own permissions.
+
+00:41.000 --> 00:48.000
+CAPTCHA, multi-factor authentication, assessments, unknown answers, and ambiguous confirmations use the same fail-closed pattern.
+
+00:48.000 --> 00:55.000
+Deterministic code owns permissions. GPT-5.6 owns explanation. Human judgment owns consequential unknowns. Apply with momentum. Stop with judgment.
