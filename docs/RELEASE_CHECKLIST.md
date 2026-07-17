@@ -6,7 +6,7 @@
 - [ ] Repository contains no `.env`, API keys, access tokens, personal resumes, application screenshots, email exports, or browser-profile files.
 - [ ] `npm run privacy:check` passes on the final commit.
 - [ ] Git history contains no secrets or private artifacts.
-- [ ] GitHub repository visibility is public.
+- [x] GitHub repository visibility is public.
 - [ ] MIT license is visible.
 
 ## Product demonstration
@@ -22,7 +22,7 @@
 
 - [x] Generate a narrated MP4 draft and WebVTT captions.
 - [x] Capture a 16:9 hero image and completed-workflow screenshot.
-- [ ] Replace all `TODO_*` URLs in `DEVPOST_SUBMISSION.md`.
+- [ ] Replace the remaining video and optional live-demo `TODO_*` URLs in `DEVPOST_SUBMISSION.md`.
 - [ ] Record and caption the 2:35 demo video.
 - [ ] Upload the video and confirm it plays without authentication.
 - [ ] Add repository, video, and optional live-demo URLs to Devpost.

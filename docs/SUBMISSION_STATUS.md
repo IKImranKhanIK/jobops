@@ -16,13 +16,13 @@ Updated July 17, 2026.
 - Extended 2:35 human-recorded video script.
 - Architecture, safety, privacy, validation, and Codex build documentation.
 - GitHub Actions verification workflow.
+- Public GitHub repository: https://github.com/IKImranKhanIK/jobops
 
 ## External account steps still required
 
 These actions cannot be completed safely inside the local repository:
 
 1. Add a valid `OPENAI_API_KEY` to `.env.local` and rerun the video so the recording contains a real GPT‑5.6 brief. The current draft is correctly labeled as offline demo content.
-2. Create or select a public GitHub repository and push this clean project.
-3. Upload `public/jobops-demo.mp4` to an unlisted/public video host and attach `public/jobops-demo.vtt` as captions.
-4. Replace the three `TODO_*` links in `docs/DEVPOST_SUBMISSION.md`.
-5. Review eligibility, accept the official rules personally, and submit through Devpost before the deadline.
+2. Upload `public/jobops-demo.mp4` to an unlisted/public video host and attach `public/jobops-demo.vtt` as captions.
+3. Replace the remaining video and optional live-demo `TODO_*` links in `docs/DEVPOST_SUBMISSION.md`.
+4. Review eligibility, accept the official rules personally, and submit through Devpost before the deadline.

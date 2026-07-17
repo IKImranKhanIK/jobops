@@ -16,7 +16,7 @@ JobOps discovers roles, explains fit with GPT‑5.6, routes an approved resume, 
 
 ## Project links
 
-- Repository: `TODO_PUBLIC_GITHUB_URL`
+- Repository: https://github.com/IKImranKhanIK/jobops
 - Demo video: `TODO_DEMO_VIDEO_URL`
 - Optional live demo: `TODO_LIVE_DEMO_URL`
 
