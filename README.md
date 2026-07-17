@@ -1,5 +1,9 @@
 # JobOps
 
+[![Verify](https://github.com/IKImranKhanIK/jobops/actions/workflows/verify.yml/badge.svg)](https://github.com/IKImranKhanIK/jobops/actions/workflows/verify.yml)
+[![MIT License](https://img.shields.io/badge/license-MIT-0d2922.svg)](LICENSE)
+![Synthetic data only](https://img.shields.io/badge/demo-synthetic%20data%20only-b7f34a.svg)
+
 **Apply with momentum. Stop with judgment.**
 
 ![JobOps hero](public/jobops-hero.png)
