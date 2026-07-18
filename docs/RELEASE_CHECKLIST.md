@@ -22,10 +22,10 @@
 
 - [x] Generate a narrated MP4 draft and WebVTT captions.
 - [x] Capture a 16:9 hero image and completed-workflow screenshot.
-- [ ] Replace the remaining video and optional live-demo `TODO_*` URLs in `DEVPOST_SUBMISSION.md`.
+- [x] Replace the remaining video and optional live-demo `TODO_*` URLs in `DEVPOST_SUBMISSION.md`.
 - [ ] Record and caption the 2:35 demo video.
-- [ ] Upload the video and confirm it plays without authentication.
-- [ ] Add repository, video, and optional live-demo URLs to Devpost.
+- [x] Upload the video and confirm it plays without authentication.
+- [x] Prepare the repository and video URLs for Devpost; no optional live demo is required.
 - [ ] Review project name, tagline, description, technologies, and team members.
 - [ ] Confirm eligibility and accept the official challenge rules personally.
 - [ ] Submit before July 21 at 5:00 PM Pacific.

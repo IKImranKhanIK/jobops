@@ -17,8 +17,8 @@ JobOps discovers roles, explains fit with an evidence-bound decision engine and 
 ## Project links
 
 - Repository: https://github.com/IKImranKhanIK/jobops
-- Demo video: `TODO_DEMO_VIDEO_URL`
-- Optional live demo: `TODO_LIVE_DEMO_URL`
+- Demo video: https://youtu.be/XgcieyK8BUU
+- Optional live demo: Not included; the repository and narrated video are public.
 
 ## Inspiration
 
