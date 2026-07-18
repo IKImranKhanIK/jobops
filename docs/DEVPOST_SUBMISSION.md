@@ -12,7 +12,7 @@ An auditable AI agent that moves job applications forward—and knows when to st
 
 ## One-sentence pitch
 
-JobOps discovers roles, explains fit with GPT‑5.6, routes an approved resume, prepares verified application answers, and records proof while failing closed whenever identity, policy, or human judgment is uncertain.
+JobOps discovers roles, explains fit with an evidence-bound decision engine and optional GPT‑5.6 synthesis, routes an approved resume, prepares verified application answers, and records proof while failing closed whenever identity, policy, or human judgment is uncertain.
 
 ## Project links
 
@@ -34,7 +34,7 @@ JobOps is a local-first job application operations agent. It:
 2. Normalizes links, removes tracking parameters, and deduplicates opportunities.
 3. Filters by location, salary, employment type, and clearance requirements.
 4. Detects the career track and scores the role against an approved resume.
-5. Uses GPT‑5.6 to create a concise, evidence-bound decision brief.
+5. Creates a concise, evidence-bound decision brief using zero-cost deterministic rules or optional GPT‑5.6 synthesis.
 6. Routes the correct approved resume and verified candidate answers.
 7. Applies only when the source and all required facts pass explicit safety gates.
 8. Stops on CAPTCHA, MFA, assessments, unknown required questions, or ambiguous success states.
@@ -47,13 +47,13 @@ The public showcase contains only synthetic candidate data, fictional employers,
 
 Codex was used as the engineering partner across the full lifecycle: repository archaeology, architecture decisions, browser-worker debugging, policy regression tests, UI implementation, privacy review, and packaging the public showcase.
 
-The showcase is built with Next.js 15 and React 19. Its server-side decision-brief route calls the OpenAI Responses API with GPT‑5.6. The prompt provides only synthetic job context and enforces an evidence boundary: the model must use supplied facts and must not fabricate qualifications. If no API key is configured, JobOps uses deterministic rules and labels the result as offline demo content instead of pretending it is model output.
+The showcase is built with Next.js 15 and React 19. Its server-side decision-brief route supports the OpenAI Responses API with GPT‑5.6 as an explicit opt-in. The prompt provides only synthetic job context and enforces an evidence boundary: the model must use supplied facts and must not fabricate qualifications. Paid API use is disabled by default, so JobOps uses deterministic rules and labels the result as offline demo content instead of pretending it is model output. Quota failures also fall back cleanly.
 
 The production prototype is local-first: Windows hosts the dashboard, API, browser worker, and local inference; PostgreSQL is isolated behind a private tunnel. Its browser layer uses source-level permissions, persistent identity controls, pacing locks, tab cleanup, explicit confirmation detection, structured logs, and a recovery queue.
 
 ## Thoughtful use of GPT‑5.6
 
-GPT‑5.6 is not used to make an opaque yes/no decision or invent a more impressive candidate. It receives a minimized, structured view of one synthetic role and produces a short decision brief with four required parts: fit verdict, evidence, watch item, and recommendation. The result is visible beside the policy and resume-routing evidence, so a user can compare model reasoning with deterministic controls.
+When enabled, GPT‑5.6 is not used to make an opaque yes/no decision or invent a more impressive candidate. It receives a minimized, structured view of one synthetic role and produces a short decision brief with four required parts: fit verdict, evidence, watch item, and recommendation. The zero-cost mode produces the same structure with deterministic rules. Either result is visibly labeled beside the policy and resume-routing evidence.
 
 This separation is intentional:
 

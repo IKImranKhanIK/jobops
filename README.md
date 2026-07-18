@@ -27,7 +27,7 @@ The showcase demonstrates one complete synthetic workflow:
 5. Fill a local synthetic form using verified answers.
 6. Confirm success only after evidence exists.
 
-When `OPENAI_API_KEY` is absent, the model brief is replaced by an explicitly labeled deterministic offline response. The interface never pretends fallback content came from OpenAI.
+Paid API use is disabled by default. Unless `OPENAI_ENABLED=true` and a key is present, the model brief is replaced by an explicitly labeled deterministic offline response. Quota errors also fall back cleanly. The interface never pretends fallback content came from OpenAI and remains usable without paid API credits.
 
 ![Completed synthetic workflow](public/jobops-workflow.png)
 
@@ -48,6 +48,7 @@ Open [http://localhost:3000](http://localhost:3000).
 To enable the live decision brief, place an API key in `.env.local`:
 
 ```env
+OPENAI_ENABLED=false
 OPENAI_API_KEY=your-key
 OPENAI_MODEL=gpt-5.6
 ```
@@ -75,7 +76,7 @@ npm run start -- -p 3100
 npm run demo:record
 ```
 
-For a competition recording, configure `OPENAI_API_KEY` first so the on-screen provider badge displays the actual GPT‑5.6 model rather than the honest offline fallback.
+For a competition recording with funded API access, set `OPENAI_ENABLED=true` and configure `OPENAI_API_KEY` so the on-screen provider badge displays the actual GPT‑5.6 model rather than the honest offline fallback.
 
 ## Safety model
 

@@ -20,13 +20,16 @@ export async function POST(request) {
   if (!job) return NextResponse.json({ error: "Unknown synthetic job." }, { status: 400 });
 
   const apiKey = process.env.OPENAI_API_KEY;
+  const openAIEnabled = process.env.OPENAI_ENABLED === "true";
   const model = process.env.OPENAI_MODEL || "gpt-5.6";
-  if (!apiKey) {
+  if (!apiKey || !openAIEnabled) {
     return NextResponse.json({
       brief: buildOfflineBrief(job),
       provider: "offline_demo",
       model: "deterministic-rules",
-      disclosure: "OPENAI_API_KEY is not configured. This response is deterministic demo content, not model output.",
+      disclosure: openAIEnabled
+        ? "OPENAI_API_KEY is not configured. This response is deterministic demo content, not model output."
+        : "Paid OpenAI API use is disabled. This response is deterministic demo content, not model output.",
     });
   }
 
@@ -52,6 +55,14 @@ export async function POST(request) {
   });
   if (!response.ok) {
     const message = await response.text();
+    if (response.status === 429 && /insufficient_quota|current quota/i.test(message)) {
+      return NextResponse.json({
+        brief: buildOfflineBrief(job),
+        provider: "offline_demo",
+        model: "deterministic-rules",
+        disclosure: "OpenAI API quota is unavailable. This is deterministic demo content, not model output, and no paid API request was completed.",
+      });
+    }
     return NextResponse.json({ error: `OpenAI request failed (${response.status}).`, detail: message.slice(0, 300) }, { status: 502 });
   }
   const payload = await response.json();
