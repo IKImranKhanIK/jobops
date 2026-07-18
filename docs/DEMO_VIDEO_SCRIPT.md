@@ -24,7 +24,7 @@ Target length: 2 minutes 35 seconds. Record at 1920×1080 with browser zoom at 9
 
 **Narration:**
 
-“This public demo uses a fictional candidate and employer. The discovery agent normalizes the role. A deterministic policy engine checks the source, location, salary, and clearance rules. GPT‑5.6 generates a decision brief using only supplied facts. The resume router selects the approved QA resume, verified answers fill the local form, and the evidence agent confirms the synthetic success state. Notice that JobOps records the model, resume, answers, policy, and confirmation—not just the final result.”
+"This public demo uses a fictional candidate and employer. The discovery agent normalizes the role. A deterministic policy engine checks the source, location, salary, and clearance rules. The zero-cost demo generates an evidence-bound brief using supplied facts; the same route supports optional GPT‑5.6 synthesis when funded API access is enabled. The resume router selects the approved QA resume, verified answers fill the local form, and the evidence agent confirms the synthetic success state. Notice that JobOps records the decision method, resume, answers, policy, and confirmation—not just the final result."
 
 ## 1:24–1:48 — Show the safety stop
 
@@ -40,7 +40,7 @@ Target length: 2 minutes 35 seconds. Record at 1920×1080 with browser zoom at 9
 
 **Narration:**
 
-“The architecture deliberately separates responsibilities. Deterministic code owns permissions and invariants. GPT‑5.6 owns nuanced synthesis and explanation. Human control owns consequential unknowns. Codex helped build, debug, test, and package the system end to end.”
+"The architecture deliberately separates responsibilities. Deterministic code owns permissions and invariants. The optional GPT‑5.6 route owns nuanced synthesis and explanation when enabled. Human control owns consequential unknowns. Codex helped build, debug, test, and package the system end to end."
 
 ## 2:15–2:35 — Close
 
@@ -55,7 +55,7 @@ Target length: 2 minutes 35 seconds. Record at 1920×1080 with browser zoom at 9
 - Use the synthetic public repository only.
 - Close personal browser tabs, notifications, email, and password managers.
 - Use a fresh browser profile or private window.
-- Configure `OPENAI_API_KEY` so the badge visibly reads `gpt-5.6`.
+- Keep `OPENAI_ENABLED=false` so the recording truthfully shows the zero-cost offline badge.
 - Clear the demo before recording, then run it once successfully.
 - Record a second take showing the review-first stop.
 - Do not show a terminal containing the API key.

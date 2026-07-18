@@ -22,7 +22,8 @@ Updated July 17, 2026.
 
 These actions cannot be completed safely inside the local repository:
 
-1. Add a valid `OPENAI_API_KEY` to `.env.local` and rerun the video so the recording contains a real GPT‑5.6 brief. The current draft is correctly labeled as offline demo content.
-2. Upload `public/jobops-demo.mp4` to an unlisted/public video host and attach `public/jobops-demo.vtt` as captions.
-3. Replace the remaining video and optional live-demo `TODO_*` links in `docs/DEVPOST_SUBMISSION.md`.
-4. Review eligibility, accept the official rules personally, and submit through Devpost before the deadline.
+1. Review eligibility, accept the official rules personally, and submit through Devpost before the deadline.
+
+The public demo video is available at https://youtu.be/XgcieyK8BUU. The optional live-demo field can be left blank.
+
+Paid OpenAI API access is optional. The current demo is correctly labeled as deterministic offline content, and API use is disabled by default so the project incurs no charges.
